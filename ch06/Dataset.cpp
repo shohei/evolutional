@@ -42,7 +42,8 @@ Dataset::Dataset(char *fileName)
             exVarNum = columnNum - 1;
          } else if(exVarNum != columnNum - 1) {
             printf("列数の異なるレコードがあります．");
-            exit(1);
+            //exit(1);
+            break;
          }
          dataNum++;
       }
