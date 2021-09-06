@@ -7,7 +7,6 @@ int main()
    FlowerSet *fSet;
 
    srand((unsigned int)time(NULL));
-
    fSet = new FlowerSet("sampledata.csv");
    for(i = 1; i <= REPEAT_NUM; i++) {
       fSet->employedBeePhase();

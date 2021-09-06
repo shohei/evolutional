@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include "Dataset.h"
+#include <stdio.h>
 
 // コンストラクタ
 // fileName: データセットのファイル名
@@ -29,6 +29,7 @@ Dataset::Dataset(char *fileName)
                   printf("空のデータが含まれています．");
                   exit(1);
                }
+               printf("increment columnNum\n");
                columnNum++;
                pos1 = pos2 + 1;
             }
@@ -40,10 +41,15 @@ Dataset::Dataset(char *fileName)
          if(exVarNum == -1) {
             exVarNum = columnNum - 1;
          } else if(exVarNum != columnNum - 1) {
+            printf("exVarNum: %d\n",exVarNum);
+            printf("columnNum: %d\n",columnNum);
+            printf("columnNum-1: %d\n",columnNum-1);
             printf("列数の異なるレコードがあります．");
-            exit(1);
+            //exit(1);
+            break;
          }
          dataNum++;
+         printf("increment dataNum\n");
       }
    }
    fclose(fp);
