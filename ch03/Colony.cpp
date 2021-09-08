@@ -84,6 +84,6 @@ void Colony::printPheromone()
       for(j = 0; j < field->nodeNum; j++) {
          printf("%8.3f", field->pheromone[i][j]);
       }
-      printf("");
+      printf("\n");
    }
 }

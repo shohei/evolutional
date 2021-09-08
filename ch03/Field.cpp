@@ -40,16 +40,16 @@ Field::Field(char *fileName)
          if(nodeNum == -1) {
             nodeNum = columnNum;
          } else if(nodeNum != columnNum) {
-            printf("列数の異なる行があります．");
-            exit(1);
+            // printf("列数の異なる行があります．");
+            // exit(1);
          }
          dataNum++;
       }
    }
    fclose(fp);
    if(nodeNum != dataNum) {
-      printf("列数と行数が一致しません．");
-      exit(1);
+      // printf("列数と行数が一致しません．");
+      // exit(1);
    }
 
    // 領域を確保して初期化する
