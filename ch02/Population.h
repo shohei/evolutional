@@ -7,19 +7,19 @@ class Population
 public:
    Population();
    ~Population();
-   void alternate();          // ¢‘ãŒğ‘ã‚ğ‚·‚é
-   void printResult();        // Œ‹‰Ê‚ğ•\¦‚·‚é
+   void alternate();          // ä¸–ä»£äº¤ä»£ã‚’ã™ã‚‹
+   void printResult();        // çµæœã‚’è¡¨ç¤ºã™ã‚‹
 
-   Individual **ind;          // Œ»¢‘ã‚ÌŒÂ‘ÌŒQ‚Ìƒƒ“ƒo
+   Individual **ind;          // ç¾ä¸–ä»£ã®å€‹ä½“ç¾¤ã®ãƒ¡ãƒ³ãƒ
 
 private:
-   void evaluate();           // ŒÂ‘Ì‚ğ•]‰¿‚·‚é
-   int select();              // eŒÂ‘Ì‚ğ‘I‘ğ‚·‚é
-   void sort(int lb, int ub); // ŒÂ‘Ì‚ğ—Ç‚¢‡‚É•À‚Ñ‘Ö‚¦‚é
+   void evaluate();           // å€‹ä½“ã‚’è©•ä¾¡ã™ã‚‹
+   int select();              // è¦ªå€‹ä½“ã‚’é¸æŠã™ã‚‹
+   void sort(int lb, int ub); // å€‹ä½“ã‚’è‰¯ã„é †ã«ä¸¦ã³æ›¿ãˆã‚‹
 
-   Individual **nextInd;      // Ÿ¢‘ã‚ÌŒÂ‘ÌŒQ‚Ìƒƒ“ƒo
+   Individual **nextInd;      // æ¬¡ä¸–ä»£ã®å€‹ä½“ç¾¤ã®ãƒ¡ãƒ³ãƒ
    /*
-   double trFit[POP_SIZE];    // “K‰“x‚ğ•ÏŠ·‚µ‚½’l
-   double denom;              // ƒ‹[ƒŒƒbƒg‘I‘ğ‚ÌŠm—¦‚ğ‹‚ß‚é‚Æ‚«‚Ì•ª•ê
+   double trFit[POP_SIZE];    // é©å¿œåº¦ã‚’å¤‰æ›ã—ãŸå€¤
+   double denom;              // ãƒ«ãƒ¼ãƒ¬ãƒƒãƒˆé¸æŠã®ç¢ºç‡ã‚’æ±‚ã‚ã‚‹ã¨ãã®åˆ†æ¯
    */
 };

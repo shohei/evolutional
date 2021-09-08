@@ -1,23 +1,23 @@
 #pragma once
 
-// •W€ƒwƒbƒ_‚ÌƒCƒ“ƒNƒ‹[ƒh
+// æ¨™æº–ãƒ˜ãƒƒãƒ€ã®ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰
 #include <time.h>
 #include <stdlib.h>
 #include <limits.h>
 #include <float.h>
 #include <math.h>
 
-// ’è”‚Ì’è‹`
-#define GEN_MAX     1000   // ¢‘ãŒğ‘ã”
-#define POP_SIZE    1000   // ŒÂ‘ÌŒQ‚ÌƒTƒCƒY
-#define ELITE       1      // ƒGƒŠ[ƒg•Û‘¶í—ª‚Åc‚·ŒÂ‘Ì‚Ì”
-#define MUTATE_PROB 0.01   // “Ë‘R•ÏˆÙŠm—¦
-#define N           64     // W‡‚Ì—v‘f‚Æ‚È‚éÅ‘å”‚Ì•½•û’l
+// å®šæ•°ã®å®šç¾©
+#define GEN_MAX     1000   // ä¸–ä»£äº¤ä»£æ•°
+#define POP_SIZE    1000   // å€‹ä½“ç¾¤ã®ã‚µã‚¤ã‚º
+#define ELITE       1      // ã‚¨ãƒªãƒ¼ãƒˆä¿å­˜æˆ¦ç•¥ã§æ®‹ã™å€‹ä½“ã®æ•°
+#define MUTATE_PROB 0.01   // çªç„¶å¤‰ç•°ç¢ºç‡
+#define N           64     // é›†åˆã®è¦ç´ ã¨ãªã‚‹æœ€å¤§æ•°ã®å¹³æ–¹å€¤
 /*
-#define TOURNAMENT_SIZE 30 // ƒg[ƒiƒƒ“ƒgƒTƒCƒY
+#define TOURNAMENT_SIZE 30 // ãƒˆãƒ¼ãƒŠãƒ¡ãƒ³ãƒˆã‚µã‚¤ã‚º
 */
 
-// 0ˆÈã1ˆÈ‰º‚ÌÀ”—”
+// 0ä»¥ä¸Š1ä»¥ä¸‹ã®å®Ÿæ•°ä¹±æ•°
 #define RAND_01 ((double)rand() / RAND_MAX)
 
 class Individual
@@ -25,10 +25,10 @@ class Individual
 public:
    Individual();
    ~Individual();
-   void evaluate();                                // “K‰“x‚ğZo‚·‚é
-   void crossover(Individual *p1, Individual *p2); // Œğ³‚É‚æ‚éq‚É‚·‚é
-   void mutate();                                  // “Ë‘R•ÏˆÙ‚ğ‹N‚±‚·
+   void evaluate();                                // é©å¿œåº¦ã‚’ç®—å‡ºã™ã‚‹
+   void crossover(Individual *p1, Individual *p2); // äº¤å‰ã«ã‚ˆã‚‹å­ã«ã™ã‚‹
+   void mutate();                                  // çªç„¶å¤‰ç•°ã‚’èµ·ã“ã™
 
-   int chrom[N];                                   // õF‘Ì
-   double fitness;                                 // “K‰“x
+   int chrom[N];                                   // æŸ“è‰²ä½“
+   double fitness;                                 // é©å¿œåº¦
 };

@@ -212,17 +212,17 @@ void Population::printResult()
 {
    int i;
 
-   printf("集合A：");
+   printf("Set A: ");
    for(i = 0; i < N; i++) {
       if(ind[0]->chrom[i] == 1) {
          printf("√%d ", i + 1);
       }
    }
-   printf("\n集合B：");
+   printf("\nSet B: ");
    for(i = 0; i < N; i++) {
       if(ind[0]->chrom[i] == 0) {
          printf("√%d ", i + 1);
       }
    }
-   printf("\n差：%f¥n", ind[0]->fitness);
+   printf("\nDifference: %f\n", ind[0]->fitness);
 }
