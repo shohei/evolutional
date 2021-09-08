@@ -80,14 +80,12 @@ void Population::alternate()
    Individual **tmp;
 
    // ルーレット選択のための処理
-   /*
-   denom = 0.0;
-   for(i = 0; i < POP_SIZE; i++) {
-      trFit[i] = (ind[POP_SIZE - 1]->fitness - ind[i]->fitness)
-                 / (ind[POP_SIZE - 1]->fitness - ind[0]->fitness);
-      denom += trFit[i];
-   }
-   */
+   //denom = 0.0;
+   //for(i = 0; i < POP_SIZE; i++) {
+   //   trFit[i] = (ind[POP_SIZE - 1]->fitness - ind[i]->fitness)
+   //              / (ind[POP_SIZE - 1]->fitness - ind[0]->fitness);
+   //   denom += trFit[i];
+   //}
 
    // エリート保存戦略で子個体を作る
    for(i = 0; i < ELITE; i++) {
@@ -125,6 +123,7 @@ int Population::select()
 
    denom = POP_SIZE * (POP_SIZE + 1) / 2;
    r = ((rand() << 16) + (rand() << 1) + (rand() % 2)) % denom + 1;
+   printf("%d\n",r);
    for(num = POP_SIZE; 0 < num; num--) {
       if(r <= num) {
          break;
