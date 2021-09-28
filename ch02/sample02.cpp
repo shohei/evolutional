@@ -10,8 +10,8 @@ int main()
 
    pop = new Population();
    for(i = 1; i <= GEN_MAX; i++) {
+      printf("Generation: %d\n",i);
       pop->alternate();
-      //printf("Generation: %d, fitness: %f\n", i, pop->ind[0]->fitness);
    }
    pop->printResult();
    delete pop;

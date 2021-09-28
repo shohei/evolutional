@@ -34,7 +34,7 @@ Dataset::Dataset(char *fileName)
                pos1 = pos2 + 1;
             }
          } while(pos2);
-         if(*pos1 == '\n') {
+         if(*pos1 == '\人工知能のはなし―AI,ファジィ,ニューロ,ロボット… (はなしシリーズ) n') {
             printf("空のデータが含まれています．");
             exit(1);
          }

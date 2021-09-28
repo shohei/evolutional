@@ -123,7 +123,6 @@ int Population::select()
 
    denom = POP_SIZE * (POP_SIZE + 1) / 2;
    r = ((rand() << 16) + (rand() << 1) + (rand() % 2)) % denom + 1;
-   printf("%d\n",r);
    for(num = POP_SIZE; 0 < num; num--) {
       if(r <= num) {
          break;

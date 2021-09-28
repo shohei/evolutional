@@ -51,6 +51,8 @@ Field::Field(char *fileName)
       // printf("列数と行数が一致しません．");
       // exit(1);
    }
+   printf("columnNum: %d, nodeNum: %d, dataNum: %d\n",columnNum,nodeNum,dataNum);
+   //columnNum: 1, nodeNum: 8, dataNum: 9
 
    // 領域を確保して初期化する
    distance = new double* [nodeNum];
